@@ -1,0 +1,21 @@
+{% extends 'fourth_task/menu.html' %}
+
+
+{% block pagename %}
+    {{ block.super }}
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content%}
+
+    <ul>
+        {% for flower in flowers %}
+            <li><h2>{{ flower }}<button>Купить</button></h2></li>
+        {% endfor %}
+    </ul>
+    <a href="/platform"><button>Вернуться обратно</button></a>
+    {{ block.super }}
+{% endblock %}}
